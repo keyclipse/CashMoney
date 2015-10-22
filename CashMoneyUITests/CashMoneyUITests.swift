@@ -29,6 +29,10 @@ class CashMoneyUITests: XCTestCase {
     }
     
     func testExample() {
+        
+        XCUIApplication().otherElements.containingType(.StaticText, identifier:"$9.40").childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.TextField).element.typeText("1000")
+        
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

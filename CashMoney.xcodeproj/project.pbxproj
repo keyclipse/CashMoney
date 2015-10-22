@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3FA3011BD5042B001F9340 /* DashedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3FA3001BD5042B001F9340 /* DashedBorderTextField.swift */; settings = {ASSET_TAGS = (); }; };
+		5D3FA3031BD5048C001F9340 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3FA3021BD5048C001F9340 /* QuartzCore.framework */; };
 		5DC215D11BD4FF220054AF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC215D01BD4FF220054AF9A /* AppDelegate.swift */; };
 		5DC215D31BD4FF220054AF9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC215D21BD4FF220054AF9A /* ViewController.swift */; };
 		5DC215D61BD4FF220054AF9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC215D41BD4FF220054AF9A /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D3FA3001BD5042B001F9340 /* DashedBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedBorderTextField.swift; sourceTree = "<group>"; };
+		5D3FA3021BD5048C001F9340 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5DC215CD1BD4FF220054AF9A /* CashMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC215D01BD4FF220054AF9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC215D21BD4FF220054AF9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3FA3031BD5048C001F9340 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		5DC215C41BD4FF220054AF9A = {
 			isa = PBXGroup;
 			children = (
+				5D3FA3021BD5048C001F9340 /* QuartzCore.framework */,
 				5DC215CF1BD4FF220054AF9A /* CashMoney */,
 				5DC215E41BD4FF220054AF9A /* CashMoneyTests */,
 				5DC215EF1BD4FF220054AF9A /* CashMoneyUITests */,
@@ -99,6 +105,7 @@
 			children = (
 				5DC215D01BD4FF220054AF9A /* AppDelegate.swift */,
 				5DC215D21BD4FF220054AF9A /* ViewController.swift */,
+				5D3FA3001BD5042B001F9340 /* DashedBorderTextField.swift */,
 				5DC215D41BD4FF220054AF9A /* Main.storyboard */,
 				5DC215D71BD4FF220054AF9A /* Assets.xcassets */,
 				5DC215D91BD4FF220054AF9A /* LaunchScreen.storyboard */,
@@ -255,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3FA3011BD5042B001F9340 /* DashedBorderTextField.swift in Sources */,
 				5DC215D31BD4FF220054AF9A /* ViewController.swift in Sources */,
 				5DC215D11BD4FF220054AF9A /* AppDelegate.swift in Sources */,
 			);
@@ -483,6 +491,7 @@
 				5DC215F71BD4FF220054AF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DC215F81BD4FF220054AF9A /* Build configuration list for PBXNativeTarget "CashMoneyTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +500,7 @@
 				5DC215FA1BD4FF220054AF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5DC215FB1BD4FF220054AF9A /* Build configuration list for PBXNativeTarget "CashMoneyUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +509,7 @@
 				5DC215FD1BD4FF220054AF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
