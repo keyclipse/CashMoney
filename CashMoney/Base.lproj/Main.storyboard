@@ -34,12 +34,13 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pvd-ok-GBr" customClass="DashedBorderTextField" customModule="CashMoney" customModuleProvider="target">
                                         <rect key="frame" x="50" y="212" width="500" height="70"/>
                                         <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="InputCurrencyField"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="tRt-di-7Xv"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="56"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="ojL-rS-NBE"/>
                                         </connections>
@@ -107,6 +108,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewH-Xk-X20">
                                 <rect key="frame" x="50" y="450" width="500" height="64.5"/>
                                 <animations/>
+                                <accessibility key="accessibilityConfiguration" identifier="OutputCurrencyLabel" label="OutputCurrencyLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="JwL-bB-d1F"/>
                                 </constraints>

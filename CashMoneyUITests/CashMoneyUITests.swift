@@ -30,11 +30,36 @@ class CashMoneyUITests: XCTestCase {
     
     func testExample() {
         
-        XCUIApplication().otherElements.containingType(.StaticText, identifier:"$9.40").childrenMatchingType(.Other).elementBoundByIndex(1).childrenMatchingType(.TextField).element.typeText("1000")
+        NSRunLoop.currentRunLoop().runMode(NSDefaultRunLoopMode, beforeDate: NSDate(timeIntervalSinceNow:3))
         
         
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let inputcurrencyfieldTextField = app.textFields["InputCurrencyField"]
+        inputcurrencyfieldTextField.tap()
+        inputcurrencyfieldTextField.typeText("5000")
+        app.typeText("\n")
+        
+        let inputString = inputcurrencyfieldTextField.value as! String
+        
+        let equalString = (inputString == "$50.00")
+        XCTAssertTrue(equalString)
+        
+        
+        
+        //There is no straightforward way to test this UILabel should have used UITextField
+        /*
+        let outputCurrencyLabel = app.staticTexts["OutputCurrencyLabel"]
+        let outputString = outputCurrencyLabel.value as! String
+        XCTAssertEqual(outputCurrencyLabel, nil)
+        */
+        
+        
+        let collectionViewsQuery = app.collectionViews
+        collectionViewsQuery.staticTexts["CAD"].swipeLeft()
+        collectionViewsQuery.staticTexts["EUR"].swipeLeft()
+        collectionViewsQuery.staticTexts["GBP"].swipeLeft()
+        collectionViewsQuery.staticTexts["JPY"].swipeLeft()
+        
     }
     
 }

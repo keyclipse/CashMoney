@@ -43,6 +43,10 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         self.topView.layer.shadowOpacity = 0.5;
         self.topView.layer.shadowColor = UIColor.blackColor().CGColor
         
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         getCurrencyRates()
     }
     
@@ -73,17 +77,21 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             
             // your code
             
-            do {
-                let resultJson = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String:AnyObject]
-                self.ratesDictionary = resultJson["rates"] as! NSDictionary
-                self.formatCurrency("0")
-                print(resultJson)
-                // use anyObj here
-            } catch {
-                print("json error: \(error)")
-            }
+            dispatch_async(dispatch_get_main_queue(), {
+                do {
+                    let resultJson = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String:AnyObject]
+                    self.ratesDictionary = resultJson["rates"] as! NSDictionary
+                    self.formatCurrency("0")
+                    print(resultJson)
+                } catch {
+                    print("json error: \(error)")
+                }
+                
+                self.loadingView.hidden = true
+            })
             
-            self.loadingView.hidden = true
+            
+            
             
         });
         task.resume()
